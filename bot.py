@@ -118,4 +118,4 @@ async def _8ball(ctx, *, question):
 
 
 
-client.run('NzQ5NjcwODIzMDM5NzI5NzU2.X0vXXA.Yqbz2U75rpIVf1w0uJVMLmefVjg')
+client.run()
