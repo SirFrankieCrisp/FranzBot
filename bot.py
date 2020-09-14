@@ -51,6 +51,11 @@ async def on_member_remove(member):
 async def ping(ctx):
     await ctx.send(f'Franz\'s latency: {round(client.latency * 1000)}ms')
 
+#echo message
+@client.command()
+async def echo(ctx, *, message):
+    await ctx.send(f'{message}')
+
 #Delete 1 (or amount) message(s) from a channel
 @client.command()
 async def delete(ctx, amount=2):
@@ -80,6 +85,11 @@ async def unban(ctx, *, member):
             await ctx.guild.unban(user)
             await ctx.send(f'Unbanned {user.mention}')
             return
+
+#Whoami command
+#@client.command()
+#async def whoami(ctx, member : discord.member):
+#    await ctx.send(member)
 
 
 ###################### Games ##########################
@@ -114,7 +124,7 @@ async def _8ball(ctx, *, question):
                  'Clearly not',
                  'I\'m not sure',
                  'Why are you asking me such things?']
-    await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+    await ctx.send(f'Que cimstion: {question}\nAnswer: {random.choice(responses)}')
 
 
 
